@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,10 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #20232a, #121212);
+      background: url('images/arka-plan.png') no-repeat center center fixed;
+      background-size: cover;
       background-attachment: fixed;
-      color: #e0e0e0;
+      color: #1a1a1a;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -22,12 +23,13 @@
       z-index: 1;
       width: 100%;
       text-align: center;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(255,255,255,0.9);
       padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     header img {
       height: 60px;
@@ -36,7 +38,7 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 36px;
       font-weight: 700;
-      color: #f5f5f5;
+      color: #202020;
       margin: 0;
       letter-spacing: 2px;
     }
@@ -52,24 +54,30 @@
       z-index: 1;
     }
     .left, .right {
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.8);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       padding: 30px;
       width: 45%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .left {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .right {
+      grid-template-columns: repeat(2, 1fr);
     }
     .left h2, .right h2 {
-      grid-column: span 2;
+      grid-column: span 3;
       text-align: center;
       margin-bottom: 20px;
       font-size: 24px;
-      color: #f0f0f0;
+      color: #202020;
     }
     .card, .book {
-      background: rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.7);
       border-radius: 15px;
       padding: 15px;
       text-align: center;
@@ -77,10 +85,10 @@
     }
     .card:hover, .book:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     .card img, .book img {
-      width: 45px;
+      width: 40px;
       margin-bottom: 8px;
     }
     .book img {
@@ -89,21 +97,22 @@
       border-radius: 10px;
     }
     .card a {
-      color: #d0d0d0;
+      color: #303030;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       text-decoration: none;
       display: block;
       margin-top: 5px;
     }
     footer {
-      background: rgba(0,0,0,0.85);
+      background: rgba(255,255,255,0.9);
       width: 100%;
       text-align: center;
       padding: 15px;
       font-size: 13px;
+      color: #707070;
       margin-top: auto;
-      color: #a0a0a0;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -115,23 +124,23 @@
 </header>
 
 <div class="main">
-  <!-- Sol taraf: YouTube -->
+  <!-- Left side: YouTube -->
   <div class="left">
-    <h2>YouTube Kanallarımız</h2>
+    <h2>Our YouTube Channels</h2>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@GlownİnReelsES" target="_blank">GlownInReels ES</a></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@GlowİnReelsEU" target="_blank">GlownInReels EU</a></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a></div>
     <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a></div>
     <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a></div>
     <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a></div>
-    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a></div>
-    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank">GlownInReels EU</a></div>
-    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a></div>
     <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a></div>
     <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a></div>
     <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"><a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a></div>
   </div>
 
-  <!-- Sağ taraf: Kitaplar -->
+  <!-- Right side: Books -->
   <div class="right">
-    <h2>E-Kitaplarımız</h2>
+    <h2>Our E-Books</h2>
     <div class="book"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute"></div>
     <div class="book"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence"></div>
     <div class="book"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes"></div>
@@ -140,7 +149,7 @@
 </div>
 
 <footer>
-  © 2025 Reel Reach Lab – Tüm Hakları Saklıdır
+  © 2025 Reel Reach Lab – All Rights Reserved
 </footer>
 
 </body>
