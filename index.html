@@ -77,31 +77,32 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
     }
-    .card, .book, .contact-btn {
+    a.card, a.book, a.contact-btn {
       background: rgba(255,255,255,0.7);
       border-radius: 15px;
       padding: 15px;
       text-align: center;
       transition: transform 0.4s, box-shadow 0.4s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
-    .card:hover, .book:hover, .contact-btn:hover {
+    a.card:hover, a.book:hover, a.contact-btn:hover {
       transform: translateY(-5px) scale(1.03);
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
-    .card img, .book img {
+    a.card img, a.book img {
       width: 40px;
       margin-bottom: 8px;
     }
-    .book img {
+    a.book img {
       width: 100px;
       height: auto;
       border-radius: 10px;
     }
-    .card a, .contact-btn a {
-      color: #303030;
+    a.card span, a.book span, a.contact-btn span {
       font-weight: 600;
       font-size: 13px;
-      text-decoration: none;
       display: block;
       margin-top: 5px;
     }
@@ -136,24 +137,24 @@
     <div>
       <div class="section-title">YouTube Channels</div>
       <div class="grid-3">
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@GlownİnReelsES" target="_blank">GlownInReels ES</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@GlowİnReelsEU" target="_blank">GlownInReels EU</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a></div>
-        <div class="card"><img src="https://upload.wikikipedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a></div>
+        <a class="card" href="https://www.youtube.com/@GlownİnReelsES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels ES</span></a>
+        <a class="card" href="https://www.youtube.com/@GlowİnReelsEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels EU</span></a>
+        <a class="card" href="https://www.youtube.com/@glowninreels" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels</span></a>
+        <a class="card" href="https://www.youtube.com/@MentoroidPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path</span></a>
+        <a class="card" href="https://www.youtube.com/@MentoroidPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path EU</span></a>
+        <a class="card" href="https://www.youtube.com/@MentoroidPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path ES</span></a>
+        <a class="card" href="https://www.youtube.com/@PsycuraPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path</span></a>
+        <a class="card" href="https://www.youtube.com/@PsycuraPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path ES</span></a>
+        <a class="card" href="https://www.youtube.com/@PsycuraPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path EU</span></a>
       </div>
     </div>
 
     <div>
       <div class="section-title">Instagram Accounts</div>
       <div class="grid-3">
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><a href="https://www.instagram.com/glowninreels/" target="_blank">@glowninreels</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><a href="https://www.instagram.com/mentoroidpath/" target="_blank">@mentoroidpath</a></div>
-        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><a href="https://www.instagram.com/psycurapath/" target="_blank">@psycurapath</a></div>
+        <a class="card" href="https://www.instagram.com/glowninreels/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@glowninreels</span></a>
+        <a class="card" href="https://www.instagram.com/mentoroidpath/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@mentoroidpath</span></a>
+        <a class="card" href="https://www.instagram.com/psycurapath/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@psycurapath</span></a>
       </div>
     </div>
   </div>
@@ -163,16 +164,16 @@
     <div>
       <div class="section-title">Our E-Books</div>
       <div class="grid-2">
-        <div class="book"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute"></div>
-        <div class="book"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence"></div>
-        <div class="book"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes"></div>
-        <div class="book"><img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal"></div>
+        <a class="book" href="#"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute"></a>
+        <a class="book" href="#"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence"></a>
+        <a class="book" href="#"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes"></a>
+        <a class="book" href="#"><img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal"></a>
       </div>
     </div>
 
     <div>
       <div class="section-title">Contact Information</div>
-      <div class="contact-btn"><a href="mailto:reelreach.lab@gmail.com">📧 Contact via Gmail</a></div>
+      <a class="contact-btn" href="mailto:reelreach.lab@gmail.com"><span>📧 Contact via Gmail</span></a>
       <div class="contact-info">
         Email: reelreach.lab@gmail.com
       </div>
