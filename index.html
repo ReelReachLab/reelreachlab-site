@@ -6,86 +6,119 @@
   <title>YouTube Kanallarım</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      margin: 0;
       font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
       text-align: center;
-      padding: 50px;
       color: white;
     }
-    h1 {
-      font-size: 40px;
+    header h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 22px;
+      margin: 0;
+      opacity: 0.8;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 10px;
+      flex-grow: 1;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      margin: 15px;
+      width: 280px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+    .card img {
+      width: 60px;
       margin-bottom: 20px;
     }
-    p {
-      font-size: 20px;
-      margin-bottom: 40px;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ff0000;
-      color: white;
+    .card a {
       text-decoration: none;
-      padding: 15px 25px;
-      margin: 10px;
-      border-radius: 30px;
-      font-size: 18px;
-      transition: background 0.3s ease;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+      color: #ff4b2b;
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      margin-top: 10px;
     }
-    .button:hover {
-      background-color: #cc0000;
-    }
-    .button img {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
+    footer {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <h1>Tüm YouTube Hesaplarım</h1>
-  <p>Tek tıkla ulaşabilirsin!</p>
 
-  <div>
-    <a href="https://www.youtube.com/@MentoroidPath" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      Mentoroid Path
-    </a>
-    <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      Mentoroid Path EU
-    </a>
-    <a href="https://www.youtube.com/@MentoroidPathES" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      Mentoroid Path ES
-    </a>
-    <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      GlownInReels ES
-    </a>
-    <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      GlownInReels EU
-    </a>
-    <a href="https://www.youtube.com/@glowninreels" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      GlownInReels
-    </a>
-    <a href="https://www.youtube.com/@PsycuraPath" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      Psycura Path
-    </a>
-    <a href="https://www.youtube.com/@PsycuraPathES" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      Psycura Path ES
-    </a>
-    <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank" class="button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-      Psycura Path EU
-    </a>
+<header>
+  <h1>İçerik Yolculuğum</h1>
+  <p>Tüm YouTube kanallarımı keşfet</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a>
   </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank">GlownInReels EU</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a>
+  </div>
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a>
+  </div>
+</div>
+
+<footer>
+  © 2025 ReelReachLab – Tüm Hakları Saklıdır
+</footer>
 
 </body>
 </html>
