@@ -9,220 +9,106 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: url('images/0b068506-9083-48d8-9d53-13751dec6c9f.png') no-repeat center center fixed;
-      background-size: cover;
-      background-attachment: fixed;
-      min-height: 100vh;
-      color: #1a1a1a;
+      background: #000;
       overflow-x: hidden;
     }
-    header {
+    .hero {
+      background: url('images/1234.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(8px);
-      padding: 20px 30px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo img {
-      height: 50px;
-    }
-    .logo span {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a1a;
-    }
-    .contact {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-    }
-    .contact a {
-      background: rgba(255,255,255,0.4);
-      padding: 8px 12px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #1a1a1a;
-      font-weight: 500;
-    }
-    .slider-container {
-      margin-top: 120px;
-      width: 50%;
-      overflow: hidden;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .slider {
-      display: flex;
-      width: calc(300px * 8);
-      animation: scroll 20s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-600px); }
-    }
-    .slide {
-      flex: 0 0 300px;
-      background: rgba(255,255,255,0.5);
-      backdrop-filter: blur(6px);
-      border-radius: 20px;
-      margin: 0 10px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
-      min-height: 180px;
-      transition: transform 0.3s;
-    }
-    .slide:hover {
-      transform: scale(1.05);
-    }
-    .slide img {
-      width: 70px;
-      height: auto;
-      border-radius: 12px;
-    }
-    .slide-text {
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .content {
-      margin: 50px 30px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
     }
-    .social-block {
-      background: rgba(255,255,255,0.4);
-      backdrop-filter: blur(8px);
-      border-radius: 20px;
-      padding: 20px;
-      flex: 1 1 300px;
-      min-width: 280px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
-    .social-title {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h4 {
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      margin: 0;
+    }
+    .hero button {
+      margin-top: 30px;
+      padding: 10px 30px;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .hero button:hover {
+      background: #fff;
+      color: #000;
+    }
+    .logo-top {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-top img {
+      height: 45px;
+    }
+    .logo-top span {
       font-size: 20px;
       font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .social-links {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-    .social-links a {
-      background: rgba(255,255,255,0.2);
-      padding: 8px 14px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #1a1a1a;
-      font-weight: 500;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
-    .social-links a:hover {
-      background: rgba(255,255,255,0.4);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #555;
-      margin-top: 30px;
+      color: #fff;
+      letter-spacing: 1px;
     }
     @media (max-width: 768px) {
-      .slider-container {
-        width: 90%;
+      .hero h1 {
+        font-size: 36px;
       }
-      .content {
-        flex-direction: column;
-        align-items: center;
+      .hero button {
+        padding: 8px 20px;
+        font-size: 14px;
       }
-      .social-links {
-        grid-template-columns: 1fr;
+      .logo-top span {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">
+<div class="hero">
+  <div class="logo-top">
     <img src="images/unnamed.png" alt="Logo">
     <span>Reel Reach Lab</span>
   </div>
-  <div class="contact">
-    <a href="mailto:reelreach.lab@gmail.com">Contact</a>
-    <span>reelreach.lab@gmail.com</span>
-  </div>
-</header>
-
-<div class="slider-container">
-  <div class="slider">
-    <div class="slide">
-      <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute">
-      <div class="slide-text">Every minute holds the key to your true potential.</div>
-    </div>
-    <div class="slide">
-      <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence">
-      <div class="slide-text">A hidden sign in the silence, whispering from the past.</div>
-    </div>
-    <div class="slide">
-      <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes">
-      <div class="slide-text">Hope rises from the ashes, forging a new destiny.</div>
-    </div>
-    <div class="slide">
-      <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
-      <div class="slide-text">The echo of betrayal tests the deepest bounds of loyalty.</div>
-    </div>
+  <div class="hero-content">
+    <h4>WE TAKE THE TIME TO</h4>
+    <h1>STAND & STARE</h1>
+    <button>BE INSPIRED</button>
   </div>
 </div>
-
-<div class="content">
-  <div class="social-block">
-    <div class="social-title">YouTube Channels</div>
-    <div class="social-links">
-      <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a>
-      <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank">GlownInReels EU</a>
-      <a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a>
-      <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a>
-      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a>
-      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a>
-      <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a>
-      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a>
-      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a>
-    </div>
-  </div>
-
-  <div class="social-block">
-    <div class="social-title">Instagram Accounts</div>
-    <div class="social-links">
-      <a href="https://www.instagram.com/glowninreels" target="_blank">@glowninreels</a>
-      <a href="https://www.instagram.com/mentoroidpath" target="_blank">@mentoroidpath</a>
-      <a href="https://www.instagram.com/psycurapath" target="_blank">@psycurapath</a>
-    </div>
-  </div>
-</div>
-
-<footer>
-  © 2025 Reel Reach Lab – All Rights Reserved
-</footer>
 
 </body>
 </html>
