@@ -60,11 +60,11 @@
       display: flex;
       gap: 30px;
       padding: 20px 30px;
-      animation: scroll 20s linear infinite;
+      animation: scroll 30s linear infinite;
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      100% { transform: translateX(-100%); }
     }
     .slide {
       flex: 0 0 300px;
@@ -140,6 +140,20 @@
       color: #555;
       margin-top: 30px;
     }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .slider {
+        flex-direction: column;
+        animation: none;
+      }
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -179,8 +193,14 @@
     <div class="social-title">YouTube Channels</div>
     <div class="social-links">
       <a href="https://www.youtube.com/@MentoroidPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path</a>
+      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path EU</a>
+      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path ES</a>
       <a href="https://www.youtube.com/@PsycuraPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path</a>
+      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path EU</a>
+      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path ES</a>
       <a href="https://www.youtube.com/@glowninreels" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels</a>
+      <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels ES</a>
+      <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels EU</a>
     </div>
   </div>
 
