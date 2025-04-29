@@ -1,222 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reel Reach Lab</title>
   <style>
-    /* Temel ayarlar */
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: url('images/arka-plan.png') no-repeat center center fixed;
+      background: url('images/0b068506-9083-48d8-9d53-13751dec6c9f.png') no-repeat center center fixed;
       background-size: cover;
       background-attachment: fixed;
-      color: #222;
+      color: #1a1a1a;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
+
     header {
       width: 100%;
       text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 25px;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
+
     header img {
-      height: 60px;
+      height: 50px;
     }
+
     header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 34px;
+      font-size: 30px;
       font-weight: 600;
-      color: #222;
+      color: #202020;
       margin: 0;
       letter-spacing: 1px;
     }
+
     .main {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      margin: 50px 0;
-      width: 90%;
-      max-width: 1400px;
-      gap: 50px;
-    }
-    .left, .right {
-      background: rgba(255,255,255,0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 30px;
-      width: 45%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .section-title {
-      font-size: 24px;
-      font-weight: 500;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-    a.card, a.book, a.contact-btn {
-      background: rgba(255,255,255,0.9);
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    a.card:hover, a.book:hover, a.contact-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-    a.card img, a.book img {
-      width: 40px;
-      margin-bottom: 10px;
-    }
-    a.book img {
-      width: 100px;
-      height: auto;
-      border-radius: 12px;
-    }
-    a.card span, a.book span, a.contact-btn span {
-      font-weight: 500;
-      font-size: 14px;
-      display: block;
-      margin-top: 8px;
-    }
-    .contact-info {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-    }
-    footer {
-      background: rgba(255,255,255,0.9);
-      width: 100%;
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      color: #777;
-      margin-top: 40px;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-    }
-    /* Responsive düzen */
-    @media screen and (max-width: 900px) {
-      .left, .right {
-        width: 100%;
-      }
-      .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media screen and (max-width: 600px) {
-      header {
-        flex-direction: column;
-      }
-      header img {
-        height: 50px;
-      }
-      header h1 {
-        font-size: 28px;
-      }
-      .grid-3, .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      .left, .right {
-        padding: 20px;
-      }
-      .section-title {
-        font-size: 22px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <img src="images/unnamed.png" alt="Reel Reach Lab Logo">
-  <h1>REEL REACH LAB</h1>
-</header>
-
-<div class="main">
-  <!-- Sol taraf: YouTube + Instagram -->
-  <div class="left">
-    <div>
-      <div class="section-title">YouTube Channels</div>
-      <div class="grid-3">
-        <a class="card" href="https://www.youtube.com/@GlownİnReelsES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels ES</span></a>
-        <a class="card" href="https://www.youtube.com/@GlowİnReelsEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels EU</span></a>
-        <a class="card" href="https://www.youtube.com/@glowninreels" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels</span></a>
-        <a class="card" href="https://www.youtube.com/@MentoroidPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path</span></a>
-        <a class="card" href="https://www.youtube.com/@MentoroidPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path EU</span></a>
-        <a class="card" href="https://www.youtube.com/@MentoroidPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path ES</span></a>
-        <a class="card" href="https://www.youtube.com/@PsycuraPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path</span></a>
-        <a class="card" href="https://www.youtube.com/@PsycuraPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path ES</span></a>
-        <a class="card" href="https://www.youtube.com/@PsycuraPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path EU</span></a>
-      </div>
-    </div>
-
-    <div>
-      <div class="section-title">Instagram Accounts</div>
-      <div class="grid-3">
-        <a class="card" href="https://www.instagram.com/glowninreels/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@glowninreels</span></a>
-        <a class="card" href="https://www.instagram.com/mentoroidpath/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@mentoroidpath</span></a>
-        <a class="card" href="https://www.instagram.com/psycurapath/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@psycurapath</span></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sağ taraf: E-Books + Contact -->
-  <div class="right">
-    <div>
-      <div class="section-title">Our E-Books</div>
-      <div class="grid-2">
-        <a class="book" href="#"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute"></a>
-        <a class="book" href="#"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence"></a>
-        <a class="book" href="#"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes"></a>
-        <a class="book" href="#"><img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal"></a>
-      </div>
-    </div>
-
-    <div>
-      <div class="section-title">Contact Information</div>
-      <a class="contact-btn" href="mailto:reelreach.lab@gmail.com"><span>📧 Contact via Gmail</span></a>
-      <div class="contact-info">
-        Email: reelreach.lab@gmail.com
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer>
-  © 2025 Reel Reach Lab – All Rights Reserved
-</footer>
-
-</body>
-</html>
+      justify-content:
