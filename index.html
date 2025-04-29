@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reel Reach Lab</title>
   <style>
     body, html {
@@ -12,217 +12,159 @@
       background: url('images/0b068506-9083-48d8-9d53-13751dec6c9f.png') no-repeat center center fixed;
       background-size: cover;
       background-attachment: fixed;
-      color: #1a1a1a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       min-height: 100vh;
+      color: #1a1a1a;
     }
-
     header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      padding: 15px 30px;
+      position: fixed;
       width: 100%;
-      text-align: center;
-      background: rgba(255,255,255,0.9);
-      padding: 20px;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .contact {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      gap: 10px;
+      font-size: 14px;
     }
-
-    header img {
-      height: 50px;
+    .contact a {
+      background: rgba(255,255,255,0.4);
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
     }
-
-    header h1 {
-      font-size: 30px;
-      font-weight: 600;
-      color: #202020;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    .main {
+    .slider {
+      margin-top: 120px;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 40px auto;
-      width: 95%;
-      max-width: 1300px;
-      gap: 40px;
+      overflow-x: auto;
+      gap: 30px;
+      padding: 20px 30px;
     }
-
-    .left, .right {
-      background: rgba(255,255,255,0.85);
+    .slide {
+      flex: 0 0 400px;
+      background: rgba(255,255,255,0.5);
       backdrop-filter: blur(6px);
       border-radius: 20px;
-      padding: 25px;
-      flex: 1 1 48%;
-      min-width: 300px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      padding: 20px;
       display: flex;
-      flex-direction: column;
-      gap: 25px;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      min-height: 180px;
     }
-
-    .section-title {
-      font-size: 22px;
+    .slide img {
+      width: 80px;
+      height: auto;
+      border-radius: 12px;
+    }
+    .slide-text {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .content {
+      margin: 50px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .social-block {
+      background: rgba(255,255,255,0.4);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 20px;
+      flex: 1 1 300px;
+      min-width: 280px;
+    }
+    .social-title {
+      font-size: 20px;
       font-weight: 600;
-      text-align: left;
-      color: #333;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-
-    .grid-3, .grid-2 {
-      display: grid;
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
       gap: 15px;
     }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    a.card, a.book, a.contact-btn {
-      background: rgba(255,255,255,0.95);
+    .social-links a {
+      background: rgba(255,255,255,0.2);
+      padding: 8px 14px;
       border-radius: 12px;
-      padding: 12px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    a.card:hover, a.book:hover, a.contact-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-    }
-
-    a.card img, a.book img {
-      width: 36px;
-      height: auto;
-      margin-bottom: 6px;
-    }
-
-    a.book img {
-      width: 90px;
-      border-radius: 8px;
-    }
-
-    a.card span, a.book span, a.contact-btn span {
-      font-size: 12px;
+      color: #1a1a1a;
       font-weight: 500;
-      display: block;
+      font-size: 14px;
     }
-
-    .contact-info {
+    footer {
       text-align: center;
+      padding: 20px;
       font-size: 13px;
       color: #555;
-      margin-top: 10px;
-    }
-
-    footer {
-      background: rgba(255,255,255,0.95);
-      width: 100%;
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      color: #777;
-      margin-top: 40px;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-    }
-
-    @media screen and (max-width: 768px) {
-      .main {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .left, .right {
-        width: 100%;
-      }
-
-      .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      header {
-        flex-direction: column;
-      }
-
-      header h1 {
-        font-size: 26px;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .grid-3, .grid-2 {
-        grid-template-columns: 1fr;
-      }
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="images/unnamed.png" alt="Reel Reach Lab Logo">
-  <h1>REEL REACH LAB</h1>
+  <div class="logo">Reel Reach Lab</div>
+  <div class="contact">
+    <a href="mailto:reelreach.lab@gmail.com">Contact</a>
+    <span>reelreach.lab@gmail.com</span>
+  </div>
 </header>
 
-<div class="main">
-  <!-- Left: YouTube + Instagram -->
-  <div class="left">
-    <div>
-      <div class="section-title">YouTube Channels</div>
-      <div class="grid-3">
-        <a class="card" href="https://www.youtube.com/@GlownİnReelsES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels ES</span></a>
-        <a class="card" href="https://www.youtube.com/@GlowİnReelsEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels EU</span></a>
-        <a class="card" href="https://www.youtube.com/@glowninreels" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>GlownInReels</span></a>
-        <a class="card" href="https://www.youtube.com/@MentoroidPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path</span></a>
-        <a class="card" href="https://www.youtube.com/@MentoroidPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path EU</span></a>
-        <a class="card" href="https://www.youtube.com/@MentoroidPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Mentoroid Path ES</span></a>
-        <a class="card" href="https://www.youtube.com/@PsycuraPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path</span></a>
-        <a class="card" href="https://www.youtube.com/@PsycuraPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path ES</span></a>
-        <a class="card" href="https://www.youtube.com/@PsycuraPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"><span>Psycura Path EU</span></a>
-      </div>
-    </div>
+<div class="slider">
+  <div class="slide">
+    <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute">
+    <div class="slide-text">Every minute holds the key to your true potential.</div>
+  </div>
+  <div class="slide">
+    <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence">
+    <div class="slide-text">A hidden sign in the silence, whispering from the past.</div>
+  </div>
+  <div class="slide">
+    <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes">
+    <div class="slide-text">Hope rises from the ashes, forging a new destiny.</div>
+  </div>
+  <div class="slide">
+    <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
+    <div class="slide-text">The echo of betrayal tests the deepest bounds of loyalty.</div>
+  </div>
+</div>
 
-    <div>
-      <div class="section-title">Instagram Accounts</div>
-      <div class="grid-3">
-        <a class="card" href="https://www.instagram.com/glowninreels/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@glowninreels</span></a>
-        <a class="card" href="https://www.instagram.com/mentoroidpath/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@mentoroidpath</span></a>
-        <a class="card" href="https://www.instagram.com/psycurapath/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"><span>@psycurapath</span></a>
-      </div>
+<div class="content">
+  <div class="social-block">
+    <div class="social-title">YouTube Channels</div>
+    <div class="social-links">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path</a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path</a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels</a>
     </div>
   </div>
 
-  <!-- Right: Books + Contact -->
-  <div class="right">
-    <div>
-      <div class="section-title">Our E-Books</div>
-      <div class="grid-2">
-        <a class="book" href="#"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute"></a>
-        <a class="book" href="#"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence"></a>
-        <a class="book" href="#"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes"></a>
-        <a class="book" href="#"><img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal"></a>
-      </div>
-    </div>
-
-    <div>
-      <div class="section-title">Contact</div>
-      <a class="contact-btn" href="mailto:reelreach.lab@gmail.com"><span>📧 Contact via Gmail</span></a>
-      <div class="contact-info">Email: reelreach.lab@gmail.com</div>
+  <div class="social-block">
+    <div class="social-title">Instagram Accounts</div>
+    <div class="social-links">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20">@mentoroidpath</a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20">@psycurapath</a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20">@glowninreels</a>
     </div>
   </div>
 </div>
