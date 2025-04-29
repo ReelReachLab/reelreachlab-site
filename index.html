@@ -9,13 +9,13 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: #000;
+      background: #f5f5f5;
       overflow-x: hidden;
     }
     .hero {
       background: url('images/1234.png') no-repeat center center;
       background-size: cover;
-      height: 100vh;
+      height: 50vh;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -44,13 +44,13 @@
       margin-bottom: 10px;
     }
     .hero h1 {
-      font-size: 60px;
+      font-size: 48px;
       font-weight: 600;
       letter-spacing: 5px;
       margin: 0;
     }
     .hero button {
-      margin-top: 30px;
+      margin-top: 20px;
       padding: 10px 30px;
       background: transparent;
       border: 2px solid #fff;
@@ -66,7 +66,7 @@
     }
     .logo-top {
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 30px;
       z-index: 10;
       display: flex;
@@ -74,25 +74,108 @@
       gap: 10px;
     }
     .logo-top img {
-      height: 45px;
+      height: 40px;
     }
     .logo-top span {
       font-size: 20px;
       font-weight: 600;
       color: #fff;
-      letter-spacing: 1px;
     }
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-      .hero button {
-        padding: 8px 20px;
-        font-size: 14px;
-      }
-      .logo-top span {
-        font-size: 16px;
-      }
+    .contact-top {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .contact-top a {
+      background: rgba(255,255,255,0.3);
+      padding: 6px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .contact-top a:hover {
+      background: #fff;
+      color: #000;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .grid-3 a {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      width: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .grid-3 a:hover {
+      background: #f0f0f0;
+    }
+    .slider-container {
+      margin: 40px auto;
+      width: 90%;
+      overflow: hidden;
+    }
+    .slider {
+      display: flex;
+      width: calc(300px * 8);
+      animation: scroll 20s linear infinite;
+    }
+    .slide {
+      flex: 0 0 300px;
+      background: #fff;
+      border-radius: 12px;
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .slide img {
+      width: 120px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .slide:hover {
+      transform: scale(1.05);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-600px); }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #555;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -103,12 +186,68 @@
     <img src="images/unnamed.png" alt="Logo">
     <span>Reel Reach Lab</span>
   </div>
+  <div class="contact-top">
+    <a href="mailto:reelreach.lab@gmail.com">Contact</a>
+    <span>reelreach.lab@gmail.com</span>
+  </div>
   <div class="hero-content">
     <h4>WE TAKE THE TIME TO</h4>
     <h1>STAND & STARE</h1>
     <button>BE INSPIRED</button>
   </div>
 </div>
+
+<div class="section">
+  <div class="section-title">YouTube Channels</div>
+  <div class="grid-3">
+    <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a>
+    <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank">GlownInReels EU</a>
+    <a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a>
+    <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a>
+    <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a>
+    <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a>
+    <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a>
+    <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a>
+    <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Instagram Accounts</div>
+  <div class="grid-3">
+    <a href="https://www.instagram.com/glowninreels" target="_blank">@glowninreels</a>
+    <a href="https://www.instagram.com/mentoroidpath" target="_blank">@mentoroidpath</a>
+    <a href="https://www.instagram.com/psycurapath" target="_blank">@psycurapath</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Our E-Books</div>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute">
+        <div>Minute by Minute</div>
+      </div>
+      <div class="slide">
+        <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence">
+        <div>The Hand in the Silence</div>
+      </div>
+      <div class="slide">
+        <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes">
+        <div>Legacy of Ashes</div>
+      </div>
+      <div class="slide">
+        <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
+        <div>The Echo of Betrayal</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Reel Reach Lab – All Rights Reserved
+</footer>
 
 </body>
 </html>
