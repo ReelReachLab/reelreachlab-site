@@ -3,15 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reel Reach Lab - Chat Room</title>
+  <title>Reel Reach Lab</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f5f5f5;
       overflow-x: hidden;
+      background: url('images/3333.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .hero {
+      height: 50vh;
+      background: rgba(0, 0, 0, 0.5);
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
     .sidebar {
       width: 200px;
@@ -21,6 +37,9 @@
       height: 100vh;
       position: fixed;
       overflow-y: auto;
+      top: 0;
+      left: 0;
+      margin-top: 50vh;
     }
     .sidebar a {
       display: block;
@@ -49,85 +68,50 @@
     .main-content {
       margin-left: 220px;
       padding: 30px;
-      flex-grow: 1;
     }
-    .chat-container {
-      max-width: 600px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .chat-messages {
-      height: 300px;
-      overflow-y: auto;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      background: #fafafa;
-      margin-bottom: 20px;
-    }
-    .chat-messages div {
-      margin-bottom: 10px;
-    }
-    .chat-input {
-      display: flex;
-      gap: 10px;
-    }
-    .chat-input input[type="text"] {
-      flex: 1;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-    .chat-input button {
-      padding: 10px 20px;
-      border: none;
-      background: #007bff;
-      color: #fff;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .chat-input button:hover {
-      background: #0056b3;
-    }
-    .user-setup {
+    .section {
+      padding: 60px 20px;
       text-align: center;
-      margin: 50px auto;
-      max-width: 400px;
+    }
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .grid-3 a {
       background: #fff;
-      padding: 20px;
       border-radius: 12px;
+      padding: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      width: 100%;
+      transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .user-setup input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
+    .grid-3 a:hover {
+      background: #f0f0f0;
     }
-    .user-setup button {
-      padding: 10px 20px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .user-setup button:hover {
-      background: #218838;
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #555;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+
+<div class="hero">
+  <h1>Reel Reach Lab</h1>
+</div>
 
 <div class="sidebar">
   <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a>
@@ -143,50 +127,29 @@
 </div>
 
 <div class="main-content">
-  <div id="user-setup" class="user-setup">
-    <h2>Enter Your Name</h2>
-    <input type="text" id="username" placeholder="Your name">
-    <br>
-    <button onclick="startChat()">Join Chat</button>
+  <div class="section">
+    <div class="section-title">Instagram Accounts</div>
+    <div class="grid-3">
+      <a href="https://www.instagram.com/glowninreels" target="_blank">@glowninreels</a>
+      <a href="https://www.instagram.com/mentoroidpath" target="_blank">@mentoroidpath</a>
+      <a href="https://www.instagram.com/psycurapath" target="_blank">@psycurapath</a>
+    </div>
   </div>
 
-  <div id="chat-container" class="chat-container" style="display:none;">
-    <h2>Chat Room</h2>
-    <div class="chat-messages" id="chat-messages"></div>
-    <div class="chat-input">
-      <input type="text" id="message" placeholder="Type your message...">
-      <button onclick="sendMessage()">Send</button>
+  <div class="section">
+    <div class="section-title">Our E-Books</div>
+    <div class="grid-3">
+      <a href="#"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute" width="150"></a>
+      <a href="#"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence" width="150"></a>
+      <a href="#"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes" width="150"></a>
+      <a href="#"><img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal" width="150"></a>
     </div>
   </div>
 </div>
 
-<script>
-  let userName = '';
-
-  function startChat() {
-    const inputName = document.getElementById('username').value.trim();
-    if (inputName) {
-      userName = inputName;
-      document.getElementById('user-setup').style.display = 'none';
-      document.getElementById('chat-container').style.display = 'block';
-    } else {
-      alert('Please enter your name.');
-    }
-  }
-
-  function sendMessage() {
-    const messageInput = document.getElementById('message');
-    const message = messageInput.value.trim();
-    if (message) {
-      const chatBox = document.getElementById('chat-messages');
-      const messageDiv = document.createElement('div');
-      messageDiv.textContent = `${userName}: ${message}`;
-      chatBox.appendChild(messageDiv);
-      chatBox.scrollTop = chatBox.scrollHeight;
-      messageInput.value = '';
-    }
-  }
-</script>
+<footer>
+  © 2025 Reel Reach Lab – All Rights Reserved
+</footer>
 
 </body>
 </html>
