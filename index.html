@@ -55,28 +55,34 @@
       color: #1a1a1a;
       font-weight: 500;
     }
-    .slider {
+    .slider-container {
       margin-top: 120px;
+      width: 50%;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .slider {
       display: flex;
-      gap: 30px;
-      padding: 20px 30px;
-      animation: scroll 30s linear infinite;
+      width: calc(300px * 8);
+      animation: scroll 20s linear infinite;
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(-600px); }
     }
     .slide {
       flex: 0 0 300px;
       background: rgba(255,255,255,0.5);
       backdrop-filter: blur(6px);
       border-radius: 20px;
-      padding: 20px;
+      margin: 0 10px;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
       min-height: 180px;
       transition: transform 0.3s;
     }
@@ -97,7 +103,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
-      justify-content: space-between;
+      justify-content: center;
     }
     .social-block {
       background: rgba(255,255,255,0.4);
@@ -113,9 +119,9 @@
       margin-bottom: 20px;
     }
     .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
     }
     .social-links a {
       background: rgba(255,255,255,0.2);
@@ -141,17 +147,15 @@
       margin-top: 30px;
     }
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .slider {
-        flex-direction: column;
-        animation: none;
+      .slider-container {
+        width: 90%;
       }
       .content {
         flex-direction: column;
         align-items: center;
+      }
+      .social-links {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -169,22 +173,24 @@
   </div>
 </header>
 
-<div class="slider">
-  <div class="slide">
-    <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute">
-    <div class="slide-text">Every minute holds the key to your true potential.</div>
-  </div>
-  <div class="slide">
-    <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence">
-    <div class="slide-text">A hidden sign in the silence, whispering from the past.</div>
-  </div>
-  <div class="slide">
-    <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes">
-    <div class="slide-text">Hope rises from the ashes, forging a new destiny.</div>
-  </div>
-  <div class="slide">
-    <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
-    <div class="slide-text">The echo of betrayal tests the deepest bounds of loyalty.</div>
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide">
+      <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute">
+      <div class="slide-text">Every minute holds the key to your true potential.</div>
+    </div>
+    <div class="slide">
+      <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence">
+      <div class="slide-text">A hidden sign in the silence, whispering from the past.</div>
+    </div>
+    <div class="slide">
+      <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes">
+      <div class="slide-text">Hope rises from the ashes, forging a new destiny.</div>
+    </div>
+    <div class="slide">
+      <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
+      <div class="slide-text">The echo of betrayal tests the deepest bounds of loyalty.</div>
+    </div>
   </div>
 </div>
 
@@ -192,24 +198,24 @@
   <div class="social-block">
     <div class="social-title">YouTube Channels</div>
     <div class="social-links">
-      <a href="https://www.youtube.com/@MentoroidPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path</a>
-      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path EU</a>
-      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Mentoroid Path ES</a>
-      <a href="https://www.youtube.com/@PsycuraPath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path</a>
-      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path EU</a>
-      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">Psycura Path ES</a>
-      <a href="https://www.youtube.com/@glowninreels" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels</a>
-      <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels ES</a>
-      <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="20">GlownInReels EU</a>
+      <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a>
+      <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank">GlownInReels EU</a>
+      <a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a>
+      <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a>
+      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a>
+      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a>
+      <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a>
+      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a>
+      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a>
     </div>
   </div>
 
   <div class="social-block">
     <div class="social-title">Instagram Accounts</div>
     <div class="social-links">
-      <a href="https://www.instagram.com/mentoroidpath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20">@mentoroidpath</a>
-      <a href="https://www.instagram.com/psycurapath" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20">@psycurapath</a>
-      <a href="https://www.instagram.com/glowninreels" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20">@glowninreels</a>
+      <a href="https://www.instagram.com/glowninreels" target="_blank">@glowninreels</a>
+      <a href="https://www.instagram.com/mentoroidpath" target="_blank">@mentoroidpath</a>
+      <a href="https://www.instagram.com/psycurapath" target="_blank">@psycurapath</a>
     </div>
   </div>
 </div>
