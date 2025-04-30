@@ -11,7 +11,7 @@
       font-family: 'Poppins', sans-serif;
       background: url('images/görsel111.png') no-repeat center center;
       background-size: cover;
-      height: 100vh;
+      min-height: 100vh;
       overflow-x: hidden;
     }
     .top-section {
@@ -29,6 +29,7 @@
       font-size: 32px;
       font-weight: 700;
       color: #000;
+      text-align: center;
       margin-bottom: 20px;
     }
     .button-strip {
@@ -107,9 +108,9 @@
   </style>
 </head>
 <body>
-  $1
-    
-    <div class="title-banner" style="margin-left: auto; margin-right: auto;">$1</div>
+  <div class="top-section">
+    <div class="title-banner">Reel Reach Laboratory</div>
+
     <div class="button-strip">
       <div>
         <div class="dropdown" style="display: inline-block; position: relative;">
@@ -126,12 +127,6 @@
             <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
           </div>
         </div>
-        <script>
-          const dropdown = document.querySelector('.dropdown');
-          const content = dropdown.querySelector('.dropdown-content');
-          dropdown.addEventListener('mouseenter', () => content.style.display = 'block');
-          dropdown.addEventListener('mouseleave', () => content.style.display = 'none');
-        </script>
         <a href="#">Books</a>
       </div>
       <a href="mailto:reelreach.lab@gmail.com">Contact: reelreach.lab@gmail.com</a>
@@ -153,8 +148,9 @@
         </div>
       </div>
     </div>
-</div>
-<div class="ad-section">
+  </div>
+
+  <div class="ad-section">
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
