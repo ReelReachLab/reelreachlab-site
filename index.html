@@ -2,152 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reel Reach Lab</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      background: url('images/3333.png') no-repeat center center fixed;
+      height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .top-section {
+      flex: 1;
+      background: url('images/ARKA%20PLAN%2011.png') no-repeat center center;
       background-size: cover;
     }
-    .hero {
-      height: 50vh;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 48px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    .sidebar {
-      width: 200px;
-      background: #fff;
-      padding: 20px;
-      border-right: 1px solid #ddd;
-      height: 100vh;
-      position: fixed;
-      overflow-y: auto;
-      top: 0;
-      left: 0;
-      margin-top: 50vh;
-    }
-    .sidebar a {
-      display: block;
-      margin-bottom: 15px;
-      text-decoration: none;
-      color: #007bff;
-      font-weight: 600;
-    }
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-    .ad-board {
-      width: 100%;
-      height: 250px;
-      background: #ececec;
-      border: 2px dashed #aaa;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: #555;
-      margin-top: 30px;
-    }
-    .main-content {
-      margin-left: 220px;
-      padding: 30px;
-    }
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .section-title {
-      font-size: 28px;
-      margin-bottom: 40px;
-      color: #333;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-    .grid-3 a {
-      background: #fff;
-      border-radius: 12px;
-      padding: 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      width: 100%;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .grid-3 a:hover {
-      background: #f0f0f0;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #555;
-      margin-top: 40px;
+    .bottom-section {
+      flex: 1;
+      background-color: #f5f5f5;
     }
   </style>
 </head>
 <body>
-
-  <div class="hero">
-    <h1>Reel Reach Lab</h1>
+  <div class="container">
+    <div class="top-section"></div>
+    <div class="bottom-section"></div>
   </div>
-
-  <div class="sidebar">
-    <a href="https://www.youtube.com/@Glown%C4%B0nReelsES" target="_blank">GlownInReels ES</a>
-    <a href="https://www.youtube.com/@Glow%C4%B0nReelsEU" target="_blank">GlownInReels EU</a>
-    <a href="https://www.youtube.com/@glowninreels" target="_blank">GlownInReels</a>
-    <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path</a>
-    <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">Mentoroid Path EU</a>
-    <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path ES</a>
-    <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path</a>
-    <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">Psycura Path EU</a>
-    <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path ES</a>
-    <div class="ad-board">ADVERTISEMENT</div>
-  </div>
-
-  <div class="main-content">
-    <div class="section">
-      <div class="section-title">Instagram Accounts</div>
-      <div class="grid-3">
-        <a href="https://www.instagram.com/glowninreels" target="_blank">@glowninreels</a>
-        <a href="https://www.instagram.com/mentoroidpath" target="_blank">@mentoroidpath</a>
-        <a href="https://www.instagram.com/psycurapath" target="_blank">@psycurapath</a>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Our E-Books</div>
-      <div class="grid-3">
-        <a href="#"><img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Minute by Minute" width="150"></a>
-        <a href="#"><img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand in the Silence" width="150"></a>
-        <a href="#"><img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes" width="150"></a>
-        <a href="#"><img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal" width="150"></a>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Reel Reach Lab – All Rights Reserved
-  </footer>
-
 </body>
 </html>
