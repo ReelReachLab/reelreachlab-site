@@ -18,7 +18,6 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       align-items: center;
     }
     .title-banner {
@@ -32,6 +31,59 @@
       color: #000;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       text-align: center;
+    }
+    .button-strip {
+      margin-top: 10px;
+      width: 100%;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+    .button-strip a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+    .channel-buttons {
+      margin-top: 60px;
+      display: flex;
+      gap: 20px;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: rgba(255,255,255,0.6);
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      text-decoration: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
     .ad-section {
       position: absolute;
@@ -56,65 +108,46 @@
       color: #333;
       text-transform: uppercase;
     }
-      .button-strip {
-      margin-top: 10px;
-      width: 100%;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+  </style>
 </head>
 <body>
   <div class="top-section">
-    $1
-    $1
-    <div class="channel-buttons" style="margin-top: 60px; display: flex; gap: 20px;">
-  <div class="dropdown" style="position: relative;">
-    <button style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(6px); cursor: pointer;">MentoroidPath</button>
-    <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
-      <a href="https://www.youtube.com/@MentoroidPath" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">MentoroidPath</a>
-      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">MentoroidPathEU</a>
-      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">MentoroidPathES</a>
-    </div>
-  </div>
-
-  <div class="dropdown" style="position: relative;">
-    <button style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(6px); cursor: pointer;">GlowninReels</button>
-    <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
-      <a href="https://www.youtube.com/@glowninreels" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">GlowninReels</a>
-      <a href="https://www.youtube.com/@GlownİnReelsEU" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">GlowninReelsEU</a>
-      <a href="https://www.youtube.com/@GlownİnReelsES" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">GlowninReelsES</a>
-    </div>
-  </div>
-
-  <div class="dropdown" style="position: relative;">
-    <button style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(6px); cursor: pointer;">PsycuraPath</button>
-    <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
-      <a href="https://www.youtube.com/@PsycuraPath" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">PsycuraPath</a>
-      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">PsycuraPathEU</a>
-      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">PsycuraPathES</a>
-    </div>
-  </div>
-</div>
+    <div class="title-banner">Reel Reach Laboratory</div>
+    <div class="button-strip">
+      <div style="display: flex; gap: 20px;">
+        <a href="#">Youtube Channels</a>
+        <a href="#">Books</a>
+      </div>
+      <div>
+        <a href="mailto:reelreach.lab@gmail.com">Contact: reelreach.lab@gmail.com</a>
       </div>
     </div>
-    <script>
-  const dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(dropdown => {
-    const content = dropdown.querySelector('.dropdown-content');
-    dropdown.addEventListener('mouseenter', () => content.style.display = 'block');
-    dropdown.addEventListener('mouseleave', () => content.style.display = 'none');
-  });
-</script>
-      <div style="flex: 1; display: flex; justify-content: flex-end; padding-right: 40px;">
-        <a href="mailto:reelreach.lab@gmail.com" style="text-decoration: none; color: #000; font-weight: 500;">Contact: reelreach.lab@gmail.com</a>
+    <div class="channel-buttons">
+      <div class="dropdown">
+        <button>MentoroidPath</button>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/@MentoroidPath" target="_blank">MentoroidPath</a>
+          <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">MentoroidPathEU</a>
+          <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">MentoroidPathES</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button>GlowninReels</button>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/@glowninreels" target="_blank">GlowninReels</a>
+          <a href="https://www.youtube.com/@GlownİnReelsEU" target="_blank">GlowninReelsEU</a>
+          <a href="https://www.youtube.com/@GlownİnReelsES" target="_blank">GlowninReelsES</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button>PsycuraPath</button>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/@PsycuraPath" target="_blank">PsycuraPath</a>
+          <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">PsycuraPathEU</a>
+          <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
+        </div>
       </div>
     </div>
-
     <div class="ad-section">
       <div class="ad-box">Advertisement</div>
       <div class="ad-box">Advertisement</div>
