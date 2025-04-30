@@ -4,97 +4,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reel Reach Lab</title>
-  $1
-</style>
-</head>body>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/görsel111.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+    .top-section {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .title-banner {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      padding: 20px 40px;
+      border-radius: 12px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 20px;
+    }
+    .button-strip {
+      width: 90%;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      margin-bottom: 60px;
+    }
+    .button-strip a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      z-index: 10;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .ad-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px auto;
+    }
+    .ad-box {
+      width: 360px;
+      height: 360px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      font-weight: bold;
+      font-size: 24px;
+      color: #333;
+      text-transform: uppercase;
+    }
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+    .slider-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+    .slide {
+      flex: 0 0 auto;
+      width: 300px;
+      margin: 0 20px;
+      text-align: center;
+    }
+    .slide img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .slide p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 6px;
+      padding: 5px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
   <div class="top-section">
-    <div style="position: absolute; top: 250px; left: 40px; display: flex; flex-direction: column; gap: 20px; z-index: 1000;">
-      <div class="dropdown">
-        <button style="padding: 14px 24px; font-size: 18px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.7); backdrop-filter: blur(6px); cursor: pointer;">MentoroidPath</button>
-        <div class="dropdown-content">
-          <a href="https://www.youtube.com/@MentoroidPath" target="_blank">MentoroidPath</a>
-          <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">MentoroidPathEU</a>
-          <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">MentoroidPathES</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button style="padding: 14px 24px; font-size: 18px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.7); backdrop-filter: blur(6px); cursor: pointer;">GlowninReels</button>
-        <div class="dropdown-content">
-          <a href="https://www.youtube.com/@glowninreels" target="_blank">GlowninReels</a>
-          <a href="https://www.youtube.com/@GlownİnReelsEU" target="_blank">GlowninReelsEU</a>
-          <a href="https://www.youtube.com/@GlownİnReelsES" target="_blank">GlowninReelsES</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button style="padding: 14px 24px; font-size: 18px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.7); backdrop-filter: blur(6px); cursor: pointer;">PsycuraPath</button>
-        <div class="dropdown-content">
-          <a href="https://www.youtube.com/@PsycuraPath" target="_blank">PsycuraPath</a>
-          <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">PsycuraPathEU</a>
-          <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
-        </div>
-      </div>
-    </div>
     <div class="title-banner">Reel Reach Laboratory</div>
     <div class="button-strip">
-      <div style="display: flex; gap: 20px;">
-        <div class="dropdown">
-          <a href="#" style="font-size: 18px; font-weight: 600; text-decoration: none; color: #000;">Youtube Channels</a>
-          <div class="dropdown-content">
-            <a href="https://www.youtube.com/@MentoroidPath" target="_blank">MentoroidPath</a>
-            <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">MentoroidPathEU</a>
-            <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">MentoroidPathES</a>
-            <a href="https://www.youtube.com/@glowninreels" target="_blank">GlowninReels</a>
-            <a href="https://www.youtube.com/@GlownİnReelsEU" target="_blank">GlowninReelsEU</a>
-            <a href="https://www.youtube.com/@GlownİnReelsES" target="_blank">GlowninReelsES</a>
-            <a href="https://www.youtube.com/@PsycuraPath" target="_blank">PsycuraPath</a>
-            <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">PsycuraPathEU</a>
-            <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="#" style="font-size: 18px; font-weight: 600; text-decoration: none; color: #000;">Books</a>
-          <div class="dropdown-content">
-            <a href="#"><img src="images/book1.png" alt="Book 1" style="height: 30px; vertical-align: middle; margin-right: 10px;"> Minute by Minute</a>
-            <a href="#"><img src="images/book2.png" alt="Book 2" style="height: 30px; vertical-align: middle; margin-right: 10px;"> The Echo of Betrayal</a>
-            <a href="#"><img src="images/book3.png" alt="Book 3" style="height: 30px; vertical-align: middle; margin-right: 10px;"> Legacy of Ashes</a>
-          </div>
-        </div>
-      </div>
       <div>
-        <a href="mailto:reelreach.lab@gmail.com" style="font-size: 16px; font-weight: 500;">Contact: reelreach.lab@gmail.com</a>
+        <a href="#">Youtube Channels</a>
+        <a href="#">Books</a>
       </div>
+      <a href="mailto:reelreach.lab@gmail.com">Contact: reelreach.lab@gmail.com</a>
     </div>
-      
-    </div>
+
     <div class="ad-section">
       <div class="ad-box">Advertisement</div>
       <div class="ad-box">Advertisement</div>
       <div class="ad-box">Advertisement</div>
     </div>
+
     <div class="slider-container">
-    <div class="slider-track">
-      <div class="slide">
-        <img src="images/book1.png" alt="Minute by Minute">
-        <p>Time management secrets revealed.</p>
-      </div>
-      <div class="slide">
-        <img src="images/book2.png" alt="The Echo of Betrayal">
-        <p>A psychological thriller you can't escape.</p>
-      </div>
-      <div class="slide">
-        <img src="images/book3.png" alt="Legacy of Ashes">
-        <p>The darkness of history reimagined.</p>
-      </div>
-      <div class="slide">
-        <img src="images/book1.png" alt="Minute by Minute">
-        <p>Time management secrets revealed.</p>
-      </div>
-      <div class="slide">
-        <img src="images/book2.png" alt="The Echo of Betrayal">
-        <p>A psychological thriller you can't escape.</p>
+      <div class="slider-track">
+        <div class="slide">
+          <img src="images/book1.png" alt="Minute by Minute">
+          <p>Time management secrets revealed.</p>
+        </div>
+        <div class="slide">
+          <img src="images/book2.png" alt="The Echo of Betrayal">
+          <p>A psychological thriller you can't escape.</p>
+        </div>
+        <div class="slide">
+          <img src="images/book3.png" alt="Legacy of Ashes">
+          <p>The darkness of history reimagined.</p>
+        </div>
+        <div class="slide">
+          <img src="images/book1.png" alt="Minute by Minute">
+          <p>Time management secrets revealed.</p>
+        </div>
+        <div class="slide">
+          <img src="images/book2.png" alt="The Echo of Betrayal">
+          <p>A psychological thriller you can't escape.</p>
+        </div>
       </div>
     </div>
   </div>
-$1
 </body>
 </html>
