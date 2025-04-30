@@ -61,6 +61,7 @@
     .slider-track {
       display: flex;
       animation: scroll 30s linear infinite;
+      width: 100%;
     }
     .slide {
       flex: 0 0 auto;
@@ -74,18 +75,19 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(0); }
     }
     .ad-section {
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin: 60px auto;
+      margin-top: 60px;
+      margin-bottom: 20px;
     }
     .ad-box {
-      width: 360px;
-      height: 360px;
+      width: 480px;
+      height: 480px;
       background: rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(12px);
       display: flex;
