@@ -71,11 +71,45 @@ $1
 <body>
   <div class="top-section">
     $1
-    <div class="button-strip">
-      <div style="flex: 1; display: flex; gap: 20px; padding-left: 40px;">
-        <a href="#" style="text-decoration: none; color: #000; font-weight: 500;">Youtube Channels</a>
-        <a href="#" style="text-decoration: none; color: #000; font-weight: 500;">Books</a>
+    $1
+    <div class="channel-buttons" style="margin-top: 60px; display: flex; gap: 20px;">
+  <div class="dropdown" style="position: relative;">
+    <button style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(6px); cursor: pointer;">MentoroidPath</button>
+    <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
+      <a href="https://www.youtube.com/@MentoroidPath" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">MentoroidPath</a>
+      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">MentoroidPathEU</a>
+      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">MentoroidPathES</a>
+    </div>
+  </div>
+
+  <div class="dropdown" style="position: relative;">
+    <button style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(6px); cursor: pointer;">GlowninReels</button>
+    <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
+      <a href="https://www.youtube.com/@glowninreels" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">GlowninReels</a>
+      <a href="https://www.youtube.com/@GlownİnReelsEU" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">GlowninReelsEU</a>
+      <a href="https://www.youtube.com/@GlownİnReelsES" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">GlowninReelsES</a>
+    </div>
+  </div>
+
+  <div class="dropdown" style="position: relative;">
+    <button style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(6px); cursor: pointer;">PsycuraPath</button>
+    <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
+      <a href="https://www.youtube.com/@PsycuraPath" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">PsycuraPath</a>
+      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">PsycuraPathEU</a>
+      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank" style="display: block; padding: 10px 20px; color: #000; text-decoration: none;">PsycuraPathES</a>
+    </div>
+  </div>
+</div>
       </div>
+    </div>
+    <script>
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown => {
+    const content = dropdown.querySelector('.dropdown-content');
+    dropdown.addEventListener('mouseenter', () => content.style.display = 'block');
+    dropdown.addEventListener('mouseleave', () => content.style.display = 'none');
+  });
+</script>
       <div style="flex: 1; display: flex; justify-content: flex-end; padding-right: 40px;">
         <a href="mailto:reelreach.lab@gmail.com" style="text-decoration: none; color: #000; font-weight: 500;">Contact: reelreach.lab@gmail.com</a>
       </div>
