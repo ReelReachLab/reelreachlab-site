@@ -16,6 +16,21 @@
       background: url('images/görsel111.png') no-repeat center center;
       background-size: cover;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .title-banner {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      padding: 20px 40px;
+      border-radius: 12px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
     }
     .ad-section {
       display: flex;
@@ -43,7 +58,9 @@
   </style>
 </head>
 <body>
-  <div class="top-section"></div>
+  <div class="top-section">
+    <div class="title-banner">Reel Reach Laboratory</div>
+  </div>
 
   <div class="ad-section">
     <div class="ad-box">Advertisement</div>
