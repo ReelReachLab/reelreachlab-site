@@ -11,7 +11,7 @@
       font-family: 'Poppins', sans-serif;
       background: url('images/görsel111.png') no-repeat center center;
       background-size: cover;
-      min-height: 100vh;
+      height: 100vh;
       overflow-x: hidden;
     }
     .top-section {
@@ -51,13 +51,16 @@
       margin-right: 20px;
     }
     .slider-container {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
       width: 100%;
       overflow: hidden;
       margin-top: 40px;
     }
     .slider-track {
       display: flex;
-      animation: scroll 20s linear infinite;
+      animation: scroll 30s linear infinite;
     }
     .slide {
       flex: 0 0 auto;
@@ -70,19 +73,9 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-    .slide p {
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #333;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(6px);
-      border-radius: 6px;
-      padding: 5px;
-    }
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      100% { transform: translateX(-100%); }
     }
     .ad-section {
       display: flex;
@@ -135,16 +128,22 @@
     <div class="slider-container">
       <div class="slider-track">
         <div class="slide">
-          <img src="images/book1.png" alt="Minute by Minute">
-          <p>Time management secrets revealed.</p>
+          <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
         </div>
         <div class="slide">
-          <img src="images/book2.png" alt="The Echo of Betrayal">
-          <p>A psychological thriller you can't escape.</p>
+          <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes – As Ashes Rose Eternal">
         </div>
         <div class="slide">
-          <img src="images/book3.png" alt="Legacy of Ashes">
-          <p>The darkness of history reimagined.</p>
+          <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Küllerin Mirası – Küller Sonsuza Yükseldiğinde">
+        </div>
+        <div class="slide">
+          <img src="images/6dbd6f2e-90ff-4b5e-9e26-9a44d6d1ef72.png" alt="Minute by Minute">
+        </div>
+        <div class="slide">
+          <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand of Fate">
+        </div>
+        <div class="slide">
+          <img src="images/57942cf9-cf91-4d8c-a8a3-8095ae8e57fc.png" alt="Legacy Ashes – While Blood Still Runs">
         </div>
       </div>
     </div>
