@@ -49,40 +49,6 @@
       font-weight: 600;
       margin-right: 20px;
     }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border-radius: 6px;
-      overflow: hidden;
-      z-index: 10;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .ad-section {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 60px auto;
-    }
-    .ad-box {
-      width: 360px;
-      height: 360px;
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(12px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 14px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      font-weight: bold;
-      font-size: 24px;
-      color: #333;
-      text-transform: uppercase;
-    }
     .slider-container {
       width: 100%;
       overflow: hidden;
@@ -117,53 +83,66 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+    .ad-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px auto;
+    }
+    .ad-box {
+      width: 360px;
+      height: 360px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      font-weight: bold;
+      font-size: 24px;
+      color: #333;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
-  <div class="top-section">
+  $1
+    <div style="position: absolute; top: 220px; left: 30px; display: flex; flex-direction: column; gap: 20px; z-index: 1000;">
+      <a href="https://www.youtube.com/@MentoroidPath" target="_blank" style="padding: 10px 20px; background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); border-radius: 8px; text-decoration: none; color: #000; font-weight: 600;">MentoroidPath</a>
+      <a href="https://www.youtube.com/@glowninreels" target="_blank" style="padding: 10px 20px; background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); border-radius: 8px; text-decoration: none; color: #000; font-weight: 600;">GlowninReels</a>
+      <a href="https://www.youtube.com/@PsycuraPath" target="_blank" style="padding: 10px 20px; background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); border-radius: 8px; text-decoration: none; color: #000; font-weight: 600;">PsycuraPath</a>
+    </div>
     <div class="title-banner">Reel Reach Laboratory</div>
     <div class="button-strip">
       <div>
-        <a href="#">Youtube Channels</a>
+        <div class="dropdown" style="display: inline-block; position: relative;">
+          <a href="#" style="position: relative;">Youtube Channels</a>
+          <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background: rgba(255,255,255,0.95); padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+            <a href="https://www.youtube.com/@MentoroidPath" target="_blank">MentoroidPath</a><br>
+            <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">MentoroidPathEU</a><br>
+            <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">MentoroidPathES</a><br>
+            <a href="https://www.youtube.com/@glowninreels" target="_blank">GlowninReels</a><br>
+            <a href="https://www.youtube.com/@GlownİnReelsEU" target="_blank">GlowninReelsEU</a><br>
+            <a href="https://www.youtube.com/@GlownİnReelsES" target="_blank">GlowninReelsES</a><br>
+            <a href="https://www.youtube.com/@PsycuraPath" target="_blank">PsycuraPath</a><br>
+            <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">PsycuraPathEU</a><br>
+            <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
+          </div>
+        </div>
+        <script>
+          const dropdown = document.querySelector('.dropdown');
+          const content = dropdown.querySelector('.dropdown-content');
+          dropdown.addEventListener('mouseenter', () => content.style.display = 'block');
+          dropdown.addEventListener('mouseleave', () => content.style.display = 'none');
+        </script>
         <a href="#">Books</a>
       </div>
       <a href="mailto:reelreach.lab@gmail.com">Contact: reelreach.lab@gmail.com</a>
     </div>
 
-    
-      <div class="ad-box">Advertisement</div>
-      <div class="ad-box">Advertisement</div>
-    </div>
-
     <div class="slider-container">
       <div class="slider-track">
-        <div class="slide">
-          <img src="images/minute.png" alt="Minute by Minute">
-          <p>Time management secrets revealed.</p>
-        </div>
-        <div class="slide">
-          <img src="images/echo.png" alt="The Echo of Betrayal">
-          <p>A psychological thriller you can't escape.</p>
-        </div>
-        <div class="slide">
-          <img src="images/legacy.png" alt="Legacy of Ashes">
-          <p>The darkness of history reimagined.</p>
-        </div>
-      </div>
-    </div>
-    <div class="ad-section">
-      <div class="ad-box">Advertisement</div>
-      <div class="ad-box">Advertisement</div>
-      <div class="ad-box">Advertisement</div>
-    </div>
-        <div class="slide">
-          <img src="images/book2.png" alt="The Echo of Betrayal">
-          <p>A psychological thriller you can't escape.</p>
-        </div>
-        <div class="slide">
-          <img src="images/book3.png" alt="Legacy of Ashes">
-          <p>The darkness of history reimagined.</p>
-        </div>
         <div class="slide">
           <img src="images/book1.png" alt="Minute by Minute">
           <p>Time management secrets revealed.</p>
@@ -172,8 +151,18 @@
           <img src="images/book2.png" alt="The Echo of Betrayal">
           <p>A psychological thriller you can't escape.</p>
         </div>
+        <div class="slide">
+          <img src="images/book3.png" alt="Legacy of Ashes">
+          <p>The darkness of history reimagined.</p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="ad-section">
+    <div class="ad-box">Advertisement</div>
+    <div class="ad-box">Advertisement</div>
+    <div class="ad-box">Advertisement</div>
   </div>
 </body>
 </html>
