@@ -18,7 +18,7 @@
       padding-top: 40px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Sola hizalama */
+      align-items: center;
       position: relative;
     }
     .title-banner {
@@ -64,30 +64,32 @@
       display: flex;
       justify-content: flex-start;
       gap: 20px;
-      width: 100%;
+      width: 33.33%; /* Kitap görselleri sayfanın 3'te 1'ine kayacak */
       overflow: hidden;
       margin-top: 40px;
       margin-bottom: 40px;
     }
     .slider-track {
       display: flex;
-      animation: scroll 30s linear infinite;
-      width: 50%;
+      animation: scroll 20s linear infinite;
+      width: 100%;
     }
     .slide {
       flex: 0 0 auto;
-      width: 300px;
-      margin: 0 20px;
+      width: 220px; /* Boyutları küçültüyoruz */
+      margin: 0 15px;
       text-align: center;
     }
     .slide img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     @keyframes scroll {
       0% { transform: translateX(100%); }
-      100% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
     .ad-section {
       display: flex;
