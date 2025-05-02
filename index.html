@@ -1,200 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reel Reach Lab</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      background: url('images/görsel111.png') no-repeat center center fixed;
-      background-size: cover;
-      overflow-x: hidden;
-    }
-
-    .logo {
+    .contact-box {
       position: fixed;
       top: 20px;
-      left: 20px;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      border-radius: 12px;
-      z-index: 20;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    .top-banner {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      padding: 20px 60px;
-      border-radius: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      z-index: 15;
-      text-align: center;
-    }
-
-    .top-banner h1 {
-      font-size: 2.5rem;
-      color: #000;
-      margin-bottom: 8px;
-    }
-
-    .top-banner p {
-      font-size: 1rem;
-      color: #000;
-    }
-
-    .book-slider-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80vw;
-      height: 200px;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    .book-slider {
-      display: flex;
-      gap: 40px;
-      animation: scrollBooks 30s linear infinite;
-    }
-
-    .book-slider img {
-      height: 180px;
-      pointer-events: auto;
-      transition: transform 0.3s;
-    }
-
-    .book-slider img:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes scrollBooks {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .footer-links {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      z-index: 10;
-    }
-
-    .footer-links a {
-      color: #fff;
-      text-decoration: none;
-      background-color: rgba(0,0,0,0.4);
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
-
-    .footer-links a:hover {
-      background-color: rgba(0,0,0,0.7);
-    }
-
-    .instagram-links {
-      position: fixed;
-      bottom: 20px;
       right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      z-index: 10;
-    }
-
-    .instagram-links a {
-      color: #fff;
-      text-decoration: none;
-      background-color: rgba(255, 0, 128, 0.5);
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
-
-    .instagram-links a:hover {
-      background-color: rgba(255, 0, 128, 0.8);
-    }
-
-    .ads-section {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 20px;
-      z-index: 5;
-      padding: 10px;
-    }
-
-    .ad-box {
-      width: 400px;
-      height: 200px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(8px);
+      padding: 12px 16px;
       border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 14px;
       font-weight: bold;
-      color: #fff;
-      font-size: 24px;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .top-banner h1 {
-        font-size: 1.8rem;
-      }
-
-      .top-banner p {
-        font-size: 0.9rem;
-      }
-
-      .book-slider-container {
-        height: 150px;
-      }
-
-      .book-slider img {
-        height: 140px;
-      }
-
-      .ad-box {
-        width: 90vw;
-        height: 120px;
-        font-size: 18px;
-      }
-
-      .ads-section {
-        flex-direction: column;
-        align-items: center;
-      }
+      color: #000;
+      z-index: 20;
     }
   </style>
 </head>
@@ -247,6 +62,9 @@
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
+  </div>
+  <div class="contact-box">
+    Contact: reelreach.lab@gmail.com
   </div>
 </body>
 </html>
