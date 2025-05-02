@@ -34,30 +34,33 @@
       height: 50px;
     }
 
-    .top-section {
-      padding-top: 100px;
+    /* BAŞLIK - Üst Ortada */
+    .top-banner {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 20px 60px;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      z-index: 15;
       text-align: center;
     }
 
-    .title-banner {
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(8px);
-      padding: 20px 40px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      display: inline-block;
-    }
-
-    .title-banner h1 {
+    .top-banner h1 {
       font-size: 2.5rem;
       color: #000;
+      margin-bottom: 8px;
     }
 
-    .title-banner p {
+    .top-banner p {
       font-size: 1rem;
       color: #000;
     }
 
+    /* KİTAPLAR - Ortada Kayar */
     .book-slider-container {
       position: absolute;
       top: 50%;
@@ -91,6 +94,7 @@
       100% { transform: translateX(-50%); }
     }
 
+    /* YOUTUBE LİNKLERİ */
     .footer-links {
       position: fixed;
       bottom: 20px;
@@ -116,6 +120,7 @@
       background-color: rgba(0,0,0,0.7);
     }
 
+    /* ALTTA 3 REKLAM */
     .ads-section {
       position: absolute;
       bottom: 30px;
@@ -148,15 +153,13 @@
     <img src="images/LOGO.png" alt="Logo">
   </div>
 
-  <!-- BAŞLIK -->
-  <div class="top-section">
-    <div class="title-banner">
-      <h1>Reel Reach Lab</h1>
-      <p>Short Videos, E-Books, and More</p>
-    </div>
+  <!-- BAŞLIK - En Üste Ortalanmış -->
+  <div class="top-banner">
+    <h1>Reel Reach Lab</h1>
+    <p>Short Videos, E-Books, and More</p>
   </div>
 
-  <!-- KİTAP GALERİSİ -->
+  <!-- KİTAP KAPAKLARI -->
   <div class="book-slider-container">
     <div class="book-slider">
       <img src="images/book1.png" alt="Book 1" />
@@ -165,7 +168,7 @@
       <img src="images/book4.png" alt="Book 4" />
       <img src="images/book5.png" alt="Book 5" />
       <img src="images/book6.png" alt="Book 6" />
-      <!-- Clone for seamless loop -->
+      <!-- Clone -->
       <img src="images/book1.png" alt="Book 1" />
       <img src="images/book2.png" alt="Book 2" />
       <img src="images/book3.png" alt="Book 3" />
@@ -175,7 +178,7 @@
     </div>
   </div>
 
-  <!-- YOUTUBE KANAL LİNKLERİ -->
+  <!-- YOUTUBE KANALLARI -->
   <div class="footer-links">
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (EN)</a>
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (TR)</a>
@@ -188,7 +191,7 @@
     <a href="https://www.youtube.com/@GlownInReelsES" target="_blank">GlownInReels (ES)</a>
   </div>
 
-  <!-- REKLAM BLOKLARI -->
+  <!-- ALTTA REKLAMLAR -->
   <div class="ads-section">
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
