@@ -16,7 +16,7 @@
       font-family: 'Poppins', sans-serif;
       background: url('images/görsel111.png') no-repeat center center fixed;
       background-size: cover;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .logo {
@@ -34,7 +34,6 @@
       height: 50px;
     }
 
-    /* BAŞLIK - Üst Ortada */
     .top-banner {
       position: fixed;
       top: 20px;
@@ -60,7 +59,6 @@
       color: #000;
     }
 
-    /* KİTAPLAR - Ortada Kayar */
     .book-slider-container {
       position: absolute;
       top: 50%;
@@ -94,7 +92,6 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* YOUTUBE LİNKLERİ */
     .footer-links {
       position: fixed;
       bottom: 20px;
@@ -120,7 +117,31 @@
       background-color: rgba(0,0,0,0.7);
     }
 
-    /* ALTTA 3 REKLAM */
+    .instagram-links {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 10;
+    }
+
+    .instagram-links a {
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(255, 0, 128, 0.5);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .instagram-links a:hover {
+      background-color: rgba(255, 0, 128, 0.8);
+    }
+
     .ads-section {
       position: absolute;
       bottom: 30px;
@@ -129,11 +150,12 @@
       display: flex;
       gap: 20px;
       z-index: 5;
+      flex-wrap: wrap;
     }
 
     .ad-box {
-      width: 200px;
-      height: 100px;
+      width: 400px;
+      height: 200px;
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(8px);
       border-radius: 12px;
@@ -142,24 +164,45 @@
       justify-content: center;
       font-weight: bold;
       color: #fff;
-      font-size: 18px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .top-banner h1 {
+        font-size: 1.8rem;
+      }
+
+      .top-banner p {
+        font-size: 0.9rem;
+      }
+
+      .book-slider-container {
+        height: 150px;
+      }
+
+      .book-slider img {
+        height: 140px;
+      }
+
+      .ad-box {
+        width: 90vw;
+        height: 120px;
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- LOGO -->
   <div class="logo">
     <img src="images/LOGO.png" alt="Logo">
   </div>
 
-  <!-- BAŞLIK - En Üste Ortalanmış -->
   <div class="top-banner">
     <h1>Reel Reach Lab</h1>
     <p>Short Videos, E-Books, and More</p>
   </div>
 
-  <!-- KİTAP KAPAKLARI -->
   <div class="book-slider-container">
     <div class="book-slider">
       <img src="images/book1.png" alt="Book 1" />
@@ -168,7 +211,6 @@
       <img src="images/book4.png" alt="Book 4" />
       <img src="images/book5.png" alt="Book 5" />
       <img src="images/book6.png" alt="Book 6" />
-      <!-- Clone -->
       <img src="images/book1.png" alt="Book 1" />
       <img src="images/book2.png" alt="Book 2" />
       <img src="images/book3.png" alt="Book 3" />
@@ -178,7 +220,6 @@
     </div>
   </div>
 
-  <!-- YOUTUBE KANALLARI -->
   <div class="footer-links">
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (EN)</a>
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (TR)</a>
@@ -191,12 +232,16 @@
     <a href="https://www.youtube.com/@GlownInReelsES" target="_blank">GlownInReels (ES)</a>
   </div>
 
-  <!-- ALTTA REKLAMLAR -->
+  <div class="instagram-links">
+    <a href="https://www.instagram.com/MentoroidPath" target="_blank">@MentoroidPath</a>
+    <a href="https://www.instagram.com/PsycuraPath" target="_blank">@PsycuraPath</a>
+    <a href="https://www.instagram.com/GlownInReels" target="_blank">@GlownInReels</a>
+  </div>
+
   <div class="ads-section">
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
     <div class="ad-box">Advertisement</div>
   </div>
-
 </body>
 </html>
