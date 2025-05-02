@@ -183,9 +183,51 @@
     }
 
     @media (max-width: 768px) {
-      .top-banner h1 {
-        font-size: 1.8rem;
-      }
+  .top-banner,
+  .logo,
+  .footer-links,
+  .instagram-links,
+  .contact-box,
+  .ads-section {
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .top-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .top-banner p {
+    font-size: 0.9rem;
+  }
+
+  .book-slider-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .book-slider {
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none;
+    gap: 10px;
+  }
+
+  .book-slider img {
+    height: 100px;
+  }
+
+  .ad-box {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
+}
 
       .top-banner p {
         font-size: 0.9rem;
