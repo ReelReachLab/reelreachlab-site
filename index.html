@@ -14,215 +14,66 @@
       height: 100vh;
       overflow-x: hidden;
     }
+
     .top-section {
       padding-top: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
     }
+
     .title-banner {
       background: rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(8px);
       padding: 20px 40px;
-      border-radius: 12px;
-      font-size: 32px;
-      font-weight: 700;
-      color: #000;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .button-strip {
-      width: 90%;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(8px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 40px;
-      margin-bottom: 60px;
-    }
-    .button-strip div {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-      margin-right: 20px;
-    }
-    .button-strip a {
-      text-decoration: none;
-      color: #000;
-      font-size: 18px;
-      font-weight: 600;
-      padding: 12px 24px;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(6px);
-      border-radius: 6px;
-    }
-    .slider-container {
-      display: flex;
-      justify-content: flex-start;
-      gap: 20px;
-      width: 100%;
-      overflow: hidden;
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-    .slider-track {
-      display: flex;
-      animation: scroll 30s linear infinite;
-      width: 50%;
-    }
-    .slide {
-      flex: 0 0 auto;
-      width: 300px;
-      margin: 0 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .slide img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    @keyframes scroll {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(0); }
-    }
-    .ad-section {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 60px;
-      margin-bottom: 20px;
-    }
-    .ad-box {
-      width: 480px;
-      height: 480px;
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(12px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 14px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      font-weight: bold;
-      font-size: 24px;
-      color: #333;
-      text-transform: uppercase;
-    }
 
-    /* 9 YouTube linki ortada olacak şekilde düzenlendi */
-    .youtube-links {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-left: 20px;
-    }
-
-    .youtube-links a {
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
+    .title-banner h1 {
+      font-size: 2.5rem;
       color: #000;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 12px;
-      border-radius: 6px;
-      backdrop-filter: blur(6px);
     }
 
-    .instagram-links {
-      position: absolute;
+    .footer-links {
+      position: fixed;
       bottom: 20px;
-      right: 20px;
-      width: auto;
+      left: 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
-    .instagram-links a {
+    .footer-links a {
+      color: #ffffff;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: 600;
-      color: #000;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 12px;
-      border-radius: 6px;
-      backdrop-filter: blur(6px);
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .footer-links a:hover {
+      background-color: rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
 <body>
   <div class="top-section">
-    <div class="title-banner">Reel Reach Laboratory</div>
-
-    <div class="button-strip">
-      <a href="https://www.youtube.com/@MentoroidPath" target="_blank">MentoroidPath</a>
-      <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">MentoroidPathEU</a>
-      <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">MentoroidPathES</a>
-      <a href="https://www.youtube.com/@glowninreels" target="_blank">GlowninReels</a>
-      <a href="https://www.youtube.com/@GlownInReelsEU" target="_blank">GlownInReelsEU</a>
-      <a href="https://www.youtube.com/@GlownInReelsES" target="_blank">GlownInReelsES</a>
-      <a href="https://www.youtube.com/@PsycuraPath" target="_blank">PsycuraPath</a>
-      <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">PsycuraPathEU</a>
-      <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
+    <div class="title-banner">
+      <h1>Reel Reach Lab</h1>
+      <p>Short Videos, E-Books, and More</p>
     </div>
-
-    <div class="slider-container">
-      <div class="slider-track">
-        <div class="slide">
-          <img src="images/d4600ee0-f3ec-450a-aa21-7d8795103999.png" alt="The Echo of Betrayal">
-        </div>
-        <div class="slide">
-          <img src="images/c2930647-f936-4ae2-a8e8-cc2275768584.png" alt="Legacy of Ashes – As Ashes Rose Eternal">
-        </div>
-        <div class="slide">
-          <img src="images/a0777a60-637d-4cb4-9822-590d0496aa4a.png" alt="Küllerin Mirası – Küller Sonsuza Yükseldiğinde">
-        </div>
-        <div class="slide">
-          <img src="images/6dbd6f2e-90ff-4b5e-9e26-9a44d6d1ef72.png" alt="Minute by Minute">
-        </div>
-        <div class="slide">
-          <img src="images/433ac978-bf18-4cc3-8cf7-2395590e9dde.png" alt="The Hand of Fate">
-        </div>
-        <div class="slide">
-          <img src="images/57942cf9-cf91-4d8c-a8e3-8095ae8e57fc.png" alt="Legacy Ashes – While Blood Still Runs">
-        </div>
-      </div>
-    </div>
-
   </div>
 
-  <!-- Sol alt köşeye YouTube linkleri -->
-  <div class="youtube-links">
-    <a href="https://www.youtube.com/@MentoroidPath" target="_blank">MentoroidPath</a>
-    <a href="https://www.youtube.com/@MentoroidPathEU" target="_blank">MentoroidPathEU</a>
-    <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">MentoroidPathES</a>
-    <a href="https://www.youtube.com/@glowninreels" target="_blank">GlowninReels</a>
-    <a href="https://www.youtube.com/@GlownInReelsEU" target="_blank">GlownInReelsEU</a>
-    <a href="https://www.youtube.com/@GlownInReelsES" target="_blank">GlownInReelsES</a>
-    <a href="https://www.youtube.com/@PsycuraPath" target="_blank">PsycuraPath</a>
-    <a href="https://www.youtube.com/@PsycuraPathEU" target="_blank">PsycuraPathEU</a>
-    <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">PsycuraPathES</a>
-  </div>
-
-  <!-- Instagram Linkleri -->
-  <div class="instagram-links">
-    <a href="https://www.instagram.com/glowninreels" target="_blank">GlowninReels</a>
-    <a href="https://www.instagram.com/mentoroidpath" target="_blank">MentoroidPath</a>
-    <a href="https://www.instagram.com/psycura_path" target="_blank">PsycuraPath</a>
-  </div>
-
-  <div class="ad-section">
-    <div class="ad-box">Advertisement</div>
-    <div class="ad-box">Advertisement</div>
-    <div class="ad-box">Advertisement</div>
+  <div class="footer-links">
+    <a href="#">YouTube</a>
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">Books</a>
+    <a href="#">Contact</a>
   </div>
 </body>
 </html>
