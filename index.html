@@ -5,21 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reel Reach Lab</title>
   <style>
-    body, html {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: url('images/görsel111.png') no-repeat center center;
+      background: url('images/görsel111.png') no-repeat center center fixed;
       background-size: cover;
-      height: 100vh;
-      overflow-x: hidden;
+      overflow: hidden;
+    }
+
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      z-index: 20;
+    }
+
+    .logo img {
+      height: 50px;
     }
 
     .top-section {
-      padding-top: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding-top: 100px;
+      text-align: center;
     }
 
     .title-banner {
@@ -28,7 +45,7 @@
       padding: 20px 40px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      text-align: center;
+      display: inline-block;
     }
 
     .title-banner h1 {
@@ -46,23 +63,21 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 60vw; /* Daralan alan */
+      width: 80vw;
       height: 200px;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0); /* Şeffaf zemin */
-      z-index: 10;
       pointer-events: none;
+      z-index: 10;
     }
 
     .book-slider {
       display: flex;
-      animation: slideBooks 10s linear infinite; /* Daha kısa ve hızlı */
       gap: 40px;
+      animation: scrollBooks 30s linear infinite;
     }
 
     .book-slider img {
       height: 180px;
-      object-fit: contain;
       pointer-events: auto;
       transition: transform 0.3s;
     }
@@ -71,13 +86,9 @@
       transform: scale(1.05);
     }
 
-    @keyframes slideBooks {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+    @keyframes scrollBooks {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     .footer-links {
@@ -87,27 +98,57 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
-      max-height: 70vh;
-      overflow-y: auto;
+      z-index: 10;
     }
 
     .footer-links a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0,0,0,0.4);
       padding: 6px 12px;
       border-radius: 8px;
-      transition: background 0.3s;
+      font-weight: bold;
       font-size: 14px;
+      transition: background 0.3s;
     }
 
     .footer-links a:hover {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .ads-section {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 5;
+    }
+
+    .ad-box {
+      width: 200px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="images/LOGO.png" alt="Logo">
+  </div>
+
+  <!-- BAŞLIK -->
   <div class="top-section">
     <div class="title-banner">
       <h1>Reel Reach Lab</h1>
@@ -115,9 +156,16 @@
     </div>
   </div>
 
-  <!-- Kayan Kitap Galerisi -->
+  <!-- KİTAP GALERİSİ -->
   <div class="book-slider-container">
     <div class="book-slider">
+      <img src="images/book1.png" alt="Book 1" />
+      <img src="images/book2.png" alt="Book 2" />
+      <img src="images/book3.png" alt="Book 3" />
+      <img src="images/book4.png" alt="Book 4" />
+      <img src="images/book5.png" alt="Book 5" />
+      <img src="images/book6.png" alt="Book 6" />
+      <!-- Clone for seamless loop -->
       <img src="images/book1.png" alt="Book 1" />
       <img src="images/book2.png" alt="Book 2" />
       <img src="images/book3.png" alt="Book 3" />
@@ -127,7 +175,7 @@
     </div>
   </div>
 
-  <!-- YouTube Kanal Linkleri -->
+  <!-- YOUTUBE KANAL LİNKLERİ -->
   <div class="footer-links">
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (EN)</a>
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (TR)</a>
@@ -139,5 +187,13 @@
     <a href="https://www.youtube.com/@GlownInReels" target="_blank">GlownInReels (TR)</a>
     <a href="https://www.youtube.com/@GlownInReelsES" target="_blank">GlownInReels (ES)</a>
   </div>
+
+  <!-- REKLAM BLOKLARI -->
+  <div class="ads-section">
+    <div class="ad-box">Advertisement</div>
+    <div class="ad-box">Advertisement</div>
+    <div class="ad-box">Advertisement</div>
+  </div>
+
 </body>
 </html>
