@@ -46,6 +46,8 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       z-index: 15;
       text-align: center;
+      width: fit-content;
+      max-width: 90vw;
     }
 
     .top-banner h1 {
@@ -142,10 +144,6 @@
       background-color: rgba(255, 0, 128, 0.8);
     }
 
-    
-
-    
-
     .contact-box {
       position: fixed;
       top: 20px;
@@ -161,69 +159,42 @@
     }
 
     @media (max-width: 768px) {
-  .top-banner,
-  .logo,
-  .footer-links,
-  .instagram-links,
-  .contact-box,
-  .ads-section {
-    position: static;
-    margin: 10px auto;
-    text-align: center;
-  }
+      .top-banner,
+      .logo,
+      .footer-links,
+      .instagram-links,
+      .contact-box {
+        position: static;
+        margin: 10px auto;
+        text-align: center;
+      }
 
-  .top-banner h1 {
-    font-size: 1.8rem;
-  }
-
-  .top-banner p {
-    font-size: 0.9rem;
-  }
-
-  .book-slider-container {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .book-slider {
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: none;
-    gap: 10px;
-  }
-
-  .book-slider img {
-    height: 100px;
-  }
-
-  
-}
+      .top-banner h1 {
+        font-size: 1.8rem;
+      }
 
       .top-banner p {
         font-size: 0.9rem;
       }
 
       .book-slider-container {
-        height: 150px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        height: auto;
+        padding: 10px 0;
+      }
+
+      .book-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: none;
+        gap: 10px;
       }
 
       .book-slider img {
-        height: 140px;
-      }
-
-      .ad-box {
-        width: 120px;
-        height: 120px;
-        font-size: 16px;
-      }
-
-      .ads-section {
-        flex-direction: column;
-        align-items: center;
+        height: 100px;
       }
     }
   </style>
@@ -271,11 +242,6 @@
     <a href="https://www.instagram.com/MentoroidPath" target="_blank">@MentoroidPath</a>
     <a href="https://www.instagram.com/PsycuraPath" target="_blank">@PsycuraPath</a>
     <a href="https://www.instagram.com/GlownInReels" target="_blank">@GlownInReels</a>
-  </div>
-
-  
-    <div class="ad-box">Advertisement</div>
-    <div class="ad-box">Advertisement</div>
   </div>
 
   <div class="contact-box">
