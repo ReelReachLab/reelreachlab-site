@@ -62,12 +62,49 @@
       0% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; }
       100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00; }
     }
+      font-size: 2.5rem;
+      color: #000;
+      margin-bottom: 8px;
+    }
 
     .top-banner p {
       font-size: 1.2rem;
       color: #ffcc00;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 16px;
+    }
+
+    .author-button {
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .author-button:hover {
+      background-color: #ffd700;
+      color: #000;
+      text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.7);
+    }
+      font-size: 1.2rem;
+      color: #ffcc00;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
       margin-bottom: 8px;
+      animation: subtleGlow 2.5s infinite alternate;
+    }
+
+    @keyframes subtleGlow {
+      0% { text-shadow: 0 0 3px #ffcc00, 0 0 6px #ffcc00; }
+      100% { text-shadow: 0 0 8px #ffcc00, 0 0 12px #ffcc00; }
+    }
+      font-size: 1rem;
+      color: #000;
     }
 
     .book-slider-container {
