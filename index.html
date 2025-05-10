@@ -68,6 +68,17 @@
     }
 
     .top-banner p {
+      font-size: 1.2rem;
+      color: #ffcc00;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 8px;
+      animation: subtleGlow 2.5s infinite alternate;
+    }
+
+    @keyframes subtleGlow {
+      0% { text-shadow: 0 0 3px #ffcc00, 0 0 6px #ffcc00; }
+      100% { text-shadow: 0 0 8px #ffcc00, 0 0 12px #ffcc00; }
+    }
       font-size: 1rem;
       color: #000;
     }
