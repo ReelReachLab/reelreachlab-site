@@ -119,6 +119,31 @@
       background-color: rgba(0,0,0,0.7);
     }
 
+    .instagram-links {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 10;
+    }
+
+    .instagram-links a {
+      color: #fff;
+      text-decoration: none;
+      background-color: rgba(255, 0, 128, 0.5);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .instagram-links a:hover {
+      background-color: rgba(255, 0, 128, 0.8);
+    }
+
     .contact-box {
       position: fixed;
       top: 20px;
@@ -137,38 +162,11 @@
       .top-banner,
       .logo,
       .footer-links,
-      .contact-box {
+      .contact-box,
+      .instagram-links {
         position: static;
         margin: 10px auto;
         text-align: center;
-      }
-
-      .top-banner h1 {
-        font-size: 1.8rem;
-      }
-
-      .top-banner p {
-        font-size: 0.9rem;
-      }
-
-      .book-slider-container {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        height: auto;
-        padding: 10px 0;
-      }
-
-      .book-slider {
-        flex-wrap: wrap;
-        justify-content: center;
-        animation: none;
-        gap: 10px;
-      }
-
-      .book-slider img {
-        height: 100px;
       }
     }
   </style>
@@ -196,12 +194,17 @@
   </div>
 
   <div class="footer-links">
-    <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (EN)</a>
     <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (TR)</a>
+    <a href="https://www.youtube.com/@MentoroidPathEN" target="_blank">Mentoroid Path (EN)</a>
     <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path (ES)</a>
-    <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path (EN)</a>
-    <a href="https://www.youtube.com/@PsycuraPath" target="_blank">Psycura Path (TR)</a>
-    <a href="https://www.youtube.com/@PsycuraPathES" target="_blank">Psycura Path (ES)</a>
+    <a href="https://www.youtube.com/@Psycurapath" target="_blank">PsycuraPath (TR)</a>
+    <a href="https://www.youtube.com/@PsycurapathEN" target="_blank">PsycuraPath (EN)</a>
+    <a href="https://www.youtube.com/@PsycurapathES" target="_blank">PsycuraPath (ES)</a>
+  </div>
+
+  <div class="instagram-links">
+    <a href="https://www.instagram.com/MentoroidPath" target="_blank">@MentoroidPath</a>
+    <a href="https://www.instagram.com/PsycuraPath" target="_blank">@PsycuraPath</a>
   </div>
 
   <div class="contact-box">
