@@ -62,10 +62,6 @@
       0% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; }
       100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00; }
     }
-      font-size: 2.5rem;
-      color: #000;
-      margin-bottom: 8px;
-    }
 
     .top-banner p {
       font-size: 1.2rem;
@@ -91,20 +87,6 @@
       background-color: #ffd700;
       color: #000;
       text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.7);
-    }
-      font-size: 1.2rem;
-      color: #ffcc00;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-      margin-bottom: 8px;
-      animation: subtleGlow 2.5s infinite alternate;
-    }
-
-    @keyframes subtleGlow {
-      0% { text-shadow: 0 0 3px #ffcc00, 0 0 6px #ffcc00; }
-      100% { text-shadow: 0 0 8px #ffcc00, 0 0 12px #ffcc00; }
-    }
-      font-size: 1rem;
-      color: #000;
     }
 
     .book-slider-container {
@@ -203,46 +185,6 @@
       color: #000;
       z-index: 20;
     }
-
-    @media (max-width: 768px) {
-      .top-banner,
-      .logo,
-      .footer-links,
-      .instagram-links,
-      .contact-box {
-        position: static;
-        margin: 10px auto;
-        text-align: center;
-      }
-
-      .top-banner h1 {
-        font-size: 1.8rem;
-      }
-
-      .top-banner p {
-        font-size: 0.9rem;
-      }
-
-      .book-slider-container {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        height: auto;
-        padding: 10px 0;
-      }
-
-      .book-slider {
-        flex-wrap: wrap;
-        justify-content: center;
-        animation: none;
-        gap: 10px;
-      }
-
-      .book-slider img {
-        height: 100px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -253,36 +195,7 @@
   <div class="top-banner">
     <h1>Reel Reach Lab</h1>
     <p>Short Videos, E-Books, and More</p>
-  </div>
-
-  <div class="book-slider-container">
-    <div class="book-slider">
-      <img src="images/bk1.jpg" alt="Book 1" />
-      <img src="images/bk3.png" alt="Book 2" />
-      <img src="images/bk5 (1).png" alt="Book 3" />
-      <img src="images/bk5 (2).png" alt="Book 4" />
-      <img src="images/book4.png" alt="Book 5" />
-      <img src="images/book5.png" alt="Book 6" />
-      <img src="images/book6.png" alt="Book 7" />
-    </div>
-  </div>
-
-  <div class="footer-links">
-    <a href="https://www.youtube.com/@MentoroidPath" target="_blank">Mentoroid Path (TR)</a>
-    <a href="https://www.youtube.com/@MentoroidPathEN" target="_blank">Mentoroid Path (EN)</a>
-    <a href="https://www.youtube.com/@MentoroidPathES" target="_blank">Mentoroid Path (ES)</a>
-    <a href="https://www.youtube.com/@Psycurapath" target="_blank">PsycuraPath (TR)</a>
-    <a href="https://www.youtube.com/@PsycurapathEN" target="_blank">PsycuraPath (EN)</a>
-    <a href="https://www.youtube.com/@PsycurapathES" target="_blank">PsycuraPath (ES)</a>
-  </div>
-
-  <div class="instagram-links">
-    <a href="https://www.instagram.com/MentoroidPath" target="_blank">@MentoroidPath</a>
-    <a href="https://www.instagram.com/PsycuraPath" target="_blank">@PsycuraPath</a>
-  </div>
-
-  <div class="contact-box">
-    Contact: <a href="mailto:reelreach.lab@gmail.com">reelreach.lab@gmail.com</a>
+    <a href="https://www.amazon.com/author/erayofficial" target="_blank" class="author-button">Author</a>
   </div>
 </body>
 </html>
